@@ -1,5 +1,10 @@
 ---
 import "../assets/app.css";
+import "material-symbols";
+
+// Components
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <html lang="en">
@@ -20,8 +25,14 @@ import "../assets/app.css";
     <title>Yin Chu Rijnaard</title>
   </head>
 
-  <!-- Content -->
-  <body class="min-h-screen min-w-screen">
-    <h1>My website</h1>
+  <!-- CONTENT -->
+  <body class="flex flex-col gap-8">
+    <Navbar />
+
+    <!-- HERO SECTION -->
+    <!-- Figure out what type of mx-[] suits bigger screens -->
+    <div class="mx-4">
+      <Hero />
+    </div>
   </body>
 </html>

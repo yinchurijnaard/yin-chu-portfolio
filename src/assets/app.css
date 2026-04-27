@@ -1,2 +1,39 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* https://invertcolors.net/ */
+
+@theme {
+  --color-background: #1a1a1a;
+  --color-text: #f0f0f0;
+  --color-text-secondary: #a8a8a8;
+  --color-border: #6e6e6e;
+}
+
+@variant light (&:where([data-theme="light"], [data-theme="light"] *));
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: #fafafa;
+    --color-text: #0f0f0f;
+    --color-text-secondary: #575757;
+    --color-border: #919191;
+  }
+}
+
+@light {
+  --color-background: #fafafa;
+  --color-text: #0f0f0f;
+  --color-text-secondary: #575757;
+  --color-border: #919191;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-text;
+  }
+}
