@@ -3,8 +3,9 @@ import "../assets/app.css";
 import "material-symbols";
 
 // Components
-import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import ProjectsNew from "../components/ProjectsNew.astro";
 ---
 
 <html lang="en">
@@ -25,14 +26,14 @@ import Hero from "../components/Hero.astro";
     <title>Yin Chu Rijnaard</title>
   </head>
 
-  <!-- CONTENT -->
-  <body class="flex flex-col gap-8">
-    <Navbar />
-
+  <body class="flex min-h-full w-screen flex-col gap-8">
     <!-- HERO SECTION -->
-    <!-- Figure out what type of mx-[] suits bigger screens -->
-    <div class="mx-4">
+    <div class="flex flex-col gap-8">
       <Hero />
+
+      <!-- Find a different way to display projects... -->
+      <About />
+      <ProjectsNew />
     </div>
   </body>
 </html>

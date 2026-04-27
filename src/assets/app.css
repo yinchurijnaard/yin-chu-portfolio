@@ -5,7 +5,9 @@
 
 @theme {
   --color-background: #1a1a1a;
+  --color-background-invert: #fafafa;
   --color-text: #f0f0f0;
+  --color-text-invert: #0f0f0f;
   --color-text-secondary: #a8a8a8;
   --color-border: #6e6e6e;
 }
@@ -15,7 +17,9 @@
 @media (prefers-color-scheme: light) {
   :root {
     --color-background: #fafafa;
+    --color-background-invert: #1a1a1a;
     --color-text: #0f0f0f;
+    --color-text-invert: #f0f0f0;
     --color-text-secondary: #575757;
     --color-border: #919191;
   }
@@ -23,7 +27,9 @@
 
 @light {
   --color-background: #fafafa;
+  --color-background-invert: #1a1a1a;
   --color-text: #0f0f0f;
+  --color-text-invert: #f0f0f0;
   --color-text-secondary: #575757;
   --color-border: #919191;
 }

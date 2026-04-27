@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+const { title, description, url, imgSrc, imgAltText } = Astro.props;
+---
+
+<div class="border border-blue-500">
+  <p class="text-xl font-bold">{title}</p>
+  <p class="">{description}</p>
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-outline text-base"
+  >
+    View on GitHub
+  </a>
+
+  <Image
+    src={imgSrc}
+    alt="test"
+    width={1200}
+    widths={[400, 800, 1200]}
+    sizes="(max-width: 768px) 100vw, 50vw"
+    format="webp"
+    quality="mid"
+  />
+</div>
