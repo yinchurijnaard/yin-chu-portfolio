@@ -37,7 +37,8 @@
 @layer base {
   html,
   body {
-    height: 100%;
+    /* The '!' below fixes the issue where the height: 100% doesn't work on Google Chrome (iOS) */
+    height: 100%!;
   }
   body {
     @apply bg-background text-text;
