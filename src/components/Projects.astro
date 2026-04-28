@@ -12,31 +12,33 @@ const res = await fetch("https://api.github.com/users/yinchurijnaard/repos", {
 const rawRepos = await res.json();
 
 // FUNCTION 3
-const myRepos = rawRepos
-  .filter(
-    (repo: { fork: any; topics: string | string[] }) =>
-      !repo.fork && repo.topics.includes("portfolio"),
-  )
-  .map(
-    (repo: {
-      id: number;
-      name: string;
-      stargazers_count: number;
-      language: string;
-      description: string;
-      html_url: string;
-      homepage: string;
-    }) => ({
-      id: repo.id,
-      name: repo.name,
-      stars: repo.stargazers_count,
-      language: repo.language || "N/A",
-      description: repo.description,
-      url: repo.html_url,
-      homepage: repo.homepage,
-    }),
-  )
-  .sort((a: { stars: number }, b: { stars: number }) => b.stars - a.stars);
+const myRepos = Array.isArray(rawRepos)
+  ? rawRepos
+      .filter(
+        (repo: { fork: any; topics: string | string[] }) =>
+          !repo.fork && repo.topics.includes("portfolio"),
+      )
+      .map(
+        (repo: {
+          id: number;
+          name: string;
+          stargazers_count: number;
+          language: string;
+          description: string;
+          html_url: string;
+          homepage: string;
+        }) => ({
+          id: repo.id,
+          name: repo.name,
+          stars: repo.stargazers_count,
+          language: repo.language || "N/A",
+          description: repo.description,
+          url: repo.html_url,
+          homepage: repo.homepage,
+        }),
+      )
+      .sort((a: { stars: number }, b: { stars: number }) => b.stars - a.stars)
+  : [];
 ---
 
 <div class="text-text-secondary flex flex-col gap-4 p-8 sm:px-32">
