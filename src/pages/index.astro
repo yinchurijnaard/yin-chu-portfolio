@@ -1,11 +1,13 @@
 ---
 import "../assets/app.css";
+import "remixicon/fonts/remixicon.css";
 import "material-symbols";
 
 // Components
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
-import ProjectsNew from "../components/ProjectsNew.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -26,14 +28,10 @@ import ProjectsNew from "../components/ProjectsNew.astro";
     <title>Yin Chu Rijnaard</title>
   </head>
 
-  <body class="flex min-h-dvh w-screen flex-col gap-8">
-    <!-- HERO SECTION -->
-    <div class="flex flex-col gap-8">
-      <Hero />
-
-      <!-- Find a different way to display projects... -->
-      <About />
-      <ProjectsNew />
-    </div>
+  <body class="flex min-h-dvh w-screen flex-col">
+    <Hero />
+    <About />
+    <Projects />
+    <Footer />
   </body>
 </html>
