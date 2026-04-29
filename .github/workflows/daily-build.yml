@@ -1,0 +1,13 @@
+name: Daily Build
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at 00:00 UTC every day
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Build
+        run: curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_r4DVYmi2pulQQwBJztknPTzQY2w4/jNggCDdEUv"
