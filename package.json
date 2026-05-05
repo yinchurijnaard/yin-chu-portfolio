@@ -17,6 +17,7 @@
     "astro": "^6.1.9",
     "daisyui": "^5.5.19",
     "material-symbols": "^0.44.4",
+    "motion": "^12.38.0",
     "remixicon": "^4.9.1",
     "tailwindcss": "^4.2.4"
   },

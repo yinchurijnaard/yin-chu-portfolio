@@ -1,5 +1,7 @@
 ---
 // FUNCTION 1
+import { motion } from "motion/react";
+
 const res = await fetch("https://api.github.com/users/yinchurijnaard/repos", {
   headers: {
     Authorization: `token ${import.meta.env.GITHUB_PAT}`,
